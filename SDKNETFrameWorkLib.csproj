@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\umarali\Desktop\faltu saudia ka kam\zatca-einvoicing-sdk-233-R3.1.9\zatca-einvoicing-sdk-233-R3.1.9\Lib\.Net\DLL\SDKNETFrameWorkLib.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5CC4B92D-2C7E-42A3-ABA0-28D32A8F219D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>SDKNETFrameWorkLib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>SDKNETFrameWorkLib</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="saxon-he-api-10.8">
+      <HintPath>lib\saxon-he-api-10.8.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeneralLogic\CSRGeneratorDTO.cs" />
+    <Compile Include="GeneralLogic\Result.cs" />
+    <Compile Include="GeneralLogic\SettingsParams.cs" />
+    <Compile Include="GeneralLogic\Utility.cs" />
+    <Compile Include="BLL\CSRGenerator.cs" />
+    <Compile Include="BLL\EInvoiceSigningLogic.cs" />
+    <Compile Include="BLL\EInvoiceValidator.cs" />
+    <Compile Include="BLL\HashingValidator.cs" />
+    <Compile Include="BLL\QRValidator.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\addQRElement.xsl" />
+    <EmbeddedResource Include="Data\addSignatureElement.xsl" />
+    <EmbeddedResource Include="Data\addUBLElement.xsl" />
+    <EmbeddedResource Include="Data\CEN-EN16931-UBL.xsl" />
+    <EmbeddedResource Include="Data\invoice.xsl" />
+    <EmbeddedResource Include="Data\qr.xml" />
+    <EmbeddedResource Include="Data\removeElements.xsl" />
+    <EmbeddedResource Include="Data\signature.xml" />
+    <EmbeddedResource Include="Data\ubl.xml" />
+    <EmbeddedResource Include="Data\UBL-Invoice-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\CCTS_CCT_SchemaModule-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-CommonAggregateComponents-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-CommonBasicComponents-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-CommonExtensionComponents-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-CommonSignatureComponents-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-CoreComponentParameters-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-ExtensionContentDataType-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-QualifiedDataTypes-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-SignatureAggregateComponents-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-SignatureBasicComponents-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-UnqualifiedDataTypes-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-XAdESv132-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-XAdESv141-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\common\UBL-xmldsig-core-schema-2\1.xsd" />
+    <EmbeddedResource Include="Data\xsd\maindoc\UBL-Invoice-2\1.xsd" />
+    <EmbeddedResource Include="Data\ZATCA_Validation_Rules.xsl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
